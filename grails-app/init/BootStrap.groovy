@@ -10,7 +10,7 @@ class BootStrap
     User u = new User('admin', 'admin').save()
     Role r = new Role('ROLE_ADMIN').save()
 
-    UserRole.create(r, u, true)
+    UserRole.create(u,r, true)
 
     u = new User('user', 'user').save()
     r = new Role('ROLE_USER').save()

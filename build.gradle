@@ -13,9 +13,14 @@ buildscript {
   }
 }
 
+plugins {
+  id "io.spring.dependency-management" version "0.5.2.RELEASE"
+}
+
 version "0.1"
 group "noodle"
 
+apply plugin: "spring-boot"
 apply plugin: "eclipse"
 apply plugin: "idea"
 apply plugin: "war"
@@ -59,7 +64,7 @@ dependencies {
   testCompile "org.grails:grails-plugin-testing"
   testCompile "org.grails.plugins:geb"
   testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
-  testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
+  //testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
 }
 
 task wrapper(type: Wrapper) {
